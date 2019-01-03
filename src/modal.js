@@ -1,7 +1,5 @@
 import $ from 'jquery';
-import _ from 'lodash';
-import trend from 'jquery-trend';
-import revealer from 'jquery-revealer';
+import debounce from 'lodash-es/debounce';
 
 export default class Modal {
   constructor(options) {
@@ -147,7 +145,7 @@ export default class Modal {
   }
 
   _bindResize() {
-    $(window).on('resize.modal', _.debounce(this._reposition.bind(this), 100));
+    $(window).on('resize.modal', debounce(this._reposition.bind(this), 100));
   }
 
   _unbindResize() {

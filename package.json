@@ -1,6 +1,6 @@
 {
   "name": "bc-modal",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "description": "Bigcommerce Modal Module",
   "main": "dist/js/modal",
@@ -42,7 +42,10 @@
     "jquery": "^3.1.0",
     "jquery-revealer": "github:pixelunion/jquery.revealer",
     "jquery-trend": "^0.1.0",
-    "lodash": "^4.14.0"
+    "lodash-es": "^4.17.11"
   },
-  "pre-commit": ["gulp-bundle", "git-add"]
+  "pre-commit": [
+    "gulp-bundle",
+    "git-add"
+  ]
 }

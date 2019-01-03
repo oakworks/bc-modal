@@ -10,17 +10,9 @@ var _jquery = require('jquery');
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _lodash = require('lodash');
+var _debounce = require('lodash-es/debounce');
 
-var _lodash2 = _interopRequireDefault(_lodash);
-
-var _jqueryTrend = require('jquery-trend');
-
-var _jqueryTrend2 = _interopRequireDefault(_jqueryTrend);
-
-var _jqueryRevealer = require('jquery-revealer');
-
-var _jqueryRevealer2 = _interopRequireDefault(_jqueryRevealer);
+var _debounce2 = _interopRequireDefault(_debounce);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -207,7 +199,7 @@ var Modal = function () {
   }, {
     key: '_bindResize',
     value: function _bindResize() {
-      (0, _jquery2.default)(window).on('resize.modal', _lodash2.default.debounce(this._reposition.bind(this), 100));
+      (0, _jquery2.default)(window).on('resize.modal', (0, _debounce2.default)(this._reposition.bind(this), 100));
     }
   }, {
     key: '_unbindResize',
